@@ -3,28 +3,191 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfólio de Cristóvão Melchioretto, desenvolvedor de software em ERP industrial, integrações e full stack.">
         <title>Portfólio | Cristóvão</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <header>
-            <h1>Cristóvão Melchioretto</h1>
-            <p>InterSystems IRIS &amp; Full Stack</p>
+        <nav class="menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#tecnologias">Tecnologias</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#formacao">Formação</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <header class="apresentacao">
             <img src="images/perfil.jpg" alt="Cristóvão Melchioretto sorrindo, de boné e mochila, na trilha do Pico Paraná.">
+            <div>
+                <h1>Cristóvão Melchioretto</h1>
+                <p class="cargo">Desenvolvedor de Software · ERP Industrial &amp; Integrações</p>
+                <p class="local">Jaraguá do Sul, SC</p>
+                <a class="botao" href="#contato">Fale comigo</a>
+            </div>
         </header>
 
         <main>
-            <section>
+            <section id="sobre">
                 <h2>Sobre mim</h2>
+                <p>
+                    Sou desenvolvedor de software em ERP industrial (ObjectScript, Caché e InterSystems IRIS).
+                    Antes de programar, trabalhei no Planejamento e Controle da Produção (PCP) de uma indústria
+                    têxtil. Por isso conheço o processo da fábrica por dentro e consigo construir o sistema que o sustenta.
+                </p>
+                <p>
+                    No dia a dia, trabalho com APIs, integração com coletores e máquinas, apontamento de produção
+                    e painéis operacionais em sistemas de missão crítica. Estou em transição para o desenvolvimento
+                    full stack e estudo Java, SQL/PostgreSQL e React.
+                </p>
+                <p>
+                    Fora do código, gosto de trilhas e montanhas, como o Pico Paraná da foto.
+                </p>
             </section>
 
-            <section>
+            <section id="experiencia">
+                <h2>Experiência</h2>
+
+                <article class="cargo-item">
+                    <div class="cargo-topo">
+                        <h3>Desenvolvedor de Software Pleno</h3>
+                        <span class="periodo">2024 – atual</span>
+                    </div>
+                    <p class="empresa">Customax Tecnologia · ERP &amp; Sistemas Corporativos</p>
+                    <ul>
+                        <li>Integrações com coletores web de ponta a ponta (interface, APIs e regras de back-end): até <strong>70% menos tempo</strong> para separar pedidos, guardar malha e romanear na expedição.</li>
+                        <li>Automação do fechamento de partidas na tecelagem: <strong>50% menos tempo e esforço</strong>.</li>
+                        <li>Mais de <strong>40% menos erros</strong> operacionais nos processos atendidos pelos coletores.</li>
+                        <li>Integração dos sistemas de tecelagem, tinturaria e acabamento, com controle de máquinas, status e paralisações.</li>
+                        <li>Automação do lançamento de paradas e de ordens de serviço na produção.</li>
+                        <li>Apontamento fase a fase e cálculo de produtividade de operadores, com regras de turno e troca de operador.</li>
+                        <li>Relatórios e painéis de produção: máquinas, paradas de máquinas e de operadores, ordens e cartões.</li>
+                        <li>APIs do ERP, incluindo rotas de perfis e permissões de usuário.</li>
+                        <li>Correção de falhas de integridade de dados e de tratamento de erros em rotinas críticas de produção.</li>
+                    </ul>
+                </article>
+
+                <article class="cargo-item">
+                    <div class="cargo-topo">
+                        <h3>Analista de Processos Industriais (PCP)</h3>
+                        <span class="periodo">2021 – 2024</span>
+                    </div>
+                    <p class="empresa">Nanete Têxtil</p>
+                    <ul>
+                        <li>Planejamento e controle da produção de três setores ao mesmo tempo: malharia, tinturaria e estamparia.</li>
+                        <li>Análise de processos e implementação de melhorias de eficiência operacional.</li>
+                        <li>Coordenação do fluxo de envio e recebimento de materiais com parceiros.</li>
+                        <li>Relatórios e indicadores de desempenho para a tomada de decisão.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="tecnologias">
                 <h2>Tecnologias</h2>
+
+                <h3 class="grupo">No dia a dia</h3>
+                <ul class="tags">
+                    <li>ObjectScript</li>
+                    <li>InterSystems IRIS</li>
+                    <li>Caché</li>
+                    <li>MUMPS</li>
+                    <li>APIs REST</li>
+                    <li>Globals (dados hierárquicos)</li>
+                    <li>Git &amp; GitHub</li>
+                    <li>VS Code</li>
+                </ul>
+
+                <h3 class="grupo">Domínio industrial</h3>
+                <ul class="tags">
+                    <li>PCP</li>
+                    <li>Malharia</li>
+                    <li>Tinturaria</li>
+                    <li>Estamparia</li>
+                    <li>Apontamento de produção</li>
+                    <li>Indicadores de produção</li>
+                </ul>
+
+                <h3 class="grupo">Estudando</h3>
+                <ul class="tags tags-estudo">
+                    <li>Java</li>
+                    <li>SQL</li>
+                    <li>PostgreSQL</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Docker</li>
+                </ul>
             </section>
 
-            <section>
+            <section id="projetos">
                 <h2>Projetos</h2>
+                <div class="projetos">
+                    <article class="projeto">
+                        <h3>Localizador e Inventário de Malhas</h3>
+                        <p>Integração do ERP com coletores de dados na expedição para localizar e inventariar malhas. Reduziu em até 70% o tempo das operações.</p>
+                        <p class="stack">ObjectScript · IRIS · Coletores</p>
+                        <p class="selo">Projeto profissional</p>
+                    </article>
+
+                    <article class="projeto">
+                        <h3>Controle de máquinas</h3>
+                        <p>Registro de status e paralisações das máquinas da malharia e da tinturaria, ligado aos painéis de produção.</p>
+                        <p class="stack">ObjectScript · APIs · Integração</p>
+                        <p class="selo">Projeto profissional</p>
+                    </article>
+
+                    <article class="projeto">
+                        <h3>Lojas virtuais em Nuvemshop</h3>
+                        <p>Montagem de lojas para clientes: cadastro de produtos e configuração fiscal (NF-e, NCM, CEST).</p>
+                        <p class="stack">Nuvemshop · E-commerce</p>
+                        <p class="selo">Freelance</p>
+                    </article>
+
+                    <article class="projeto">
+                        <h3>Este portfólio</h3>
+                        <p>Site pessoal feito com HTML e CSS puros, publicado no GitHub Pages.</p>
+                        <p class="stack">HTML · CSS</p>
+                        <a href="https://github.com/CristovaoMelchioretto/CristovaoMelchioretto.github.io" target="_blank" rel="noopener">Ver código</a>
+                    </article>
+                </div>
+            </section>
+
+            <section id="formacao">
+                <h2>Formação</h2>
+                <div class="formacao">
+                    <div>
+                        <h3>Bacharelado em Engenharia de Software</h3>
+                        <p>Unicesumar · 2024 – 2028 (em andamento)</p>
+                    </div>
+                    <div>
+                        <h3>AI Java Back-end Developer</h3>
+                        <p>Santander Open Academy / DIO</p>
+                    </div>
+                    <div>
+                        <h3>Análise de Dados e Inteligência Artificial</h3>
+                        <p>Santander Open Academy / Alura</p>
+                    </div>
+                    <div>
+                        <h3>JavaScript e TypeScript do Básico ao Avançado</h3>
+                        <p>Udemy</p>
+                    </div>
+                </div>
+                <p class="idioma">Inglês: básico-intermediário (estudando)</p>
+            </section>
+
+            <section id="contato">
+                <h2>Contato</h2>
+                <p>Quer conversar sobre um projeto ou uma oportunidade? Me chame:</p>
+                <ul class="contatos">
+                    <li><a href="mailto:cristovaogm@gmail.com">cristovaogm@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/crist%C3%B3v%C3%A3o-melchioretto-396b00172" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://github.com/CristovaoMelchioretto" target="_blank" rel="noopener">GitHub</a></li>
+                </ul>
             </section>
         </main>
+
+        <footer>
+            <p>&copy; 2026 Cristóvão Melchioretto</p>
+        </footer>
     </body>
 </html>

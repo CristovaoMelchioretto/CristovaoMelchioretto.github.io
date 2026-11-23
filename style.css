@@ -1,0 +1,327 @@
+/* ===== Cores e medidas (mude aqui para trocar o visual inteiro) ===== */
+:root {
+    --fundo: #f7f7f5;
+    --superficie: #ffffff;
+    --texto: #1f2328;
+    --texto-suave: #59636e;
+    --destaque: #2f6f5e;
+    --destaque-claro: #e3f0eb;
+    --borda: #e2e4e8;
+    --raio: 12px;
+    --largura: 960px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fundo: #121416;
+        --superficie: #1b1e21;
+        --texto: #e6e8ea;
+        --texto-suave: #a0a8b0;
+        --destaque: #6fc2a8;
+        --destaque-claro: #1f3530;
+        --borda: #2c3136;
+    }
+}
+
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--texto);
+    background: var(--fundo);
+}
+
+a {
+    color: var(--destaque);
+}
+
+/* ===== Menu ===== */
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    padding: 14px 16px;
+    background: var(--superficie);
+    border-bottom: 1px solid var(--borda);
+}
+
+.menu a {
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: var(--destaque);
+}
+
+/* ===== Apresentação ===== */
+.apresentacao {
+    max-width: var(--largura);
+    margin: 0 auto;
+    padding: 72px 16px 48px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.apresentacao img {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--destaque);
+}
+
+.apresentacao h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.cargo {
+    font-size: 1.25rem;
+    color: var(--texto-suave);
+    margin-top: 8px;
+}
+
+.local {
+    color: var(--texto-suave);
+    margin: 4px 0 24px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: var(--destaque);
+    color: var(--superficie);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.botao:hover {
+    opacity: 0.85;
+}
+
+/* ===== Seções ===== */
+main {
+    max-width: var(--largura);
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+section {
+    padding: 48px 0;
+    border-top: 1px solid var(--borda);
+    scroll-margin-top: 60px; /* não esconder o título atrás do menu fixo */
+}
+
+section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+
+section p + p {
+    margin-top: 12px;
+}
+
+/* ===== Tecnologias ===== */
+.tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags li {
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--destaque-claro);
+    color: var(--destaque);
+    font-weight: 500;
+}
+
+.grupo {
+    font-size: 1rem;
+    color: var(--texto-suave);
+    margin: 24px 0 10px;
+}
+
+.grupo:first-of-type {
+    margin-top: 0;
+}
+
+/* tecnologias em estudo: só contorno, para diferenciar das que você já usa */
+.tags-estudo li {
+    background: transparent;
+    border: 1px dashed var(--destaque);
+}
+
+/* ===== Experiência ===== */
+.cargo-item {
+    padding-left: 20px;
+    border-left: 3px solid var(--destaque);
+}
+
+.cargo-item + .cargo-item {
+    margin-top: 32px;
+}
+
+.cargo-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+}
+
+.cargo-topo h3 {
+    font-size: 1.15rem;
+}
+
+.periodo {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+.empresa {
+    color: var(--destaque);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.cargo-item ul {
+    padding-left: 18px;
+}
+
+.cargo-item li + li {
+    margin-top: 6px;
+}
+
+/* ===== Formação ===== */
+.formacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.formacao h3 {
+    font-size: 1rem;
+}
+
+.formacao p {
+    color: var(--texto-suave);
+}
+
+.idioma {
+    margin-top: 24px;
+}
+
+/* ===== Projetos ===== */
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.projeto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.projeto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.projeto .stack {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+.projeto .selo {
+    margin-top: auto;
+    align-self: flex-start;
+    font-size: 0.8rem;
+    padding: 2px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--borda);
+    color: var(--texto-suave);
+}
+
+.projeto a {
+    margin-top: auto; /* empurra o link para o fim do card */
+    font-weight: 600;
+}
+
+/* ===== Contato ===== */
+.contatos {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.contatos a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--destaque);
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contatos a:hover {
+    background: var(--destaque);
+    color: var(--superficie);
+}
+
+/* ===== Rodapé ===== */
+footer {
+    text-align: center;
+    padding: 32px 16px;
+    color: var(--texto-suave);
+    border-top: 1px solid var(--borda);
+}
+
+/* ===== Celular ===== */
+@media (max-width: 640px) {
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+        gap: 24px;
+    }
+
+    .apresentacao img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .apresentacao h1 {
+        font-size: 2rem;
+    }
+}
