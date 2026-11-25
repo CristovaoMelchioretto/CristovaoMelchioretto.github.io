@@ -276,6 +276,10 @@ section p + p {
     font-weight: 600;
 }
 
+.projeto .selo + a {
+    margin-top: 0; /* o selo já empurra os dois para o fim do card */
+}
+
 /* ===== Contato ===== */
 .contatos {
     list-style: none;
